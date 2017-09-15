@@ -1,0 +1,44 @@
+
+
+<div>
+	<div class='container'>
+		<div class='row'>
+			<div class='col-md-4 col-md-offset-4'>
+
+				<h1 class='h2'>Register</h1>
+				{{#if errors}}
+        		<div class="alert alert-danger">{{errors}}</div>
+        		{{/if}}
+
+				<form action="/register" method="post">
+		          <input type="hidden" name="_csrf" value="{{csrf}}"/>
+		          <div class="form-group">
+		            <input type="text" name="email" value="" class='form-control' placeholder='Email' />
+		          </div>
+
+		          <div class="form-group">
+		            <input type="password" name="password" value="" class="form-control" placeholder="Password" />
+		          </div> 
+
+		          <div class="form-group">
+		            <input type="password" name="confirmPassword" value="" class="form-control" placeholder="Confirm password" />
+		          </div>          		         
+
+		          <div class="form-group">
+		            <button type="submit" class="btn btn-primary form-control">Register</button>
+		          </div>
+		          
+		        </form>
+
+				<br/>
+				Already have account? <a href='/login'>Login</a>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+{{#contentFor "footerScripts"}}
+  
+{{/contentFor}}
+

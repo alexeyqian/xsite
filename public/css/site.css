@@ -1,0 +1,63 @@
+/* Fix mobile safari zoom input issue, make all 16px;*/
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+select:focus,
+textarea {
+  font-size: 16px; }
+
+/* Fix margin right issue*/
+@media (min-width: 768px) {
+  .navbar-right {
+    float: right !important;
+    margin-right: 0px !important; } }
+
+/*Fix google map autocomplete issue.*/
+.pac-container {
+  z-index: 1051 !important; }
+
+/* Loader Styles*/
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  background: #000;
+  opacity: 0.3;
+  z-index: 9997; }
+
+.loader {
+  border: 16px solid #f3f3f3;
+  /* Light grey */
+  border-top: 16px solid #3498db;
+  /* Blue */
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -32px;
+  margin-top: -32px;
+  animation: spin 2s linear infinite; }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+/* Home Page Styles*/

@@ -1,0 +1,44 @@
+<div>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-md-4 col-md-offset-4'>
+        <h1 class='h2'>Login</h1>
+        {{#if flash}}
+        <div class="alert alert-danger">{{flash}}</div>
+        {{/if}}
+        <form action="/login" method="post">
+          <input type="hidden" name="_csrf" value="{{csrf}}"/>
+          <div class="form-group">
+            <input type="text" name="username" value="" class='form-control' placeholder='Email' />
+          </div>
+          <div class="form-group">
+            <input type="password" name="password" value="" class="form-control" placeholder="Password" />
+          </div>
+          <div class="form-group">
+            <div id="remember" class="checkbox">
+              <label>
+                <input type="checkbox" value="remember-me"> Remember me
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary form-control">Login</button>
+          </div>
+          
+        </form>
+        
+        <div><a href='/forgotpassword'>forgot the password?</a></div>
+        <div>Don't have account yet?  <a href='/register'>Register</a></div>
+        <hr/>
+        <div>
+          Sign in with <a href="/auth/facebook">Facebook</a> or
+          <a href="/auth/twitter">Twitter</a> or
+          <a href="/auth/google">Google</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{#contentFor "footerScripts"}}
+
+{{/contentFor}}

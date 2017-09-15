@@ -1,0 +1,32 @@
+/* Fix mobile safari zoom input issue, make all 16px;*/
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+select:focus,
+textarea {
+  font-size: 16px;
+}
+
+/* Fix margin right issue*/
+@media (min-width: 768px) {
+    .navbar-right {
+        float: right !important;
+        margin-right: 0px !important;
+    }
+}
+
+/*Fix google map autocomplete issue.*/
+.pac-container {
+    z-index: 1051 !important;
+}
